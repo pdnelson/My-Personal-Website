@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
+footer {
+	text-align: center;
+}
+
 #navbar {
 	overflow: hidden;
 	background-color: #222831;
