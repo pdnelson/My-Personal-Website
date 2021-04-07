@@ -52,10 +52,9 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0; 
 	list-style: none; 
 	text-align: center;
-	
 }
 
-#navbar li{
+#navbar li {
 	display: inline-block;
 	text-align: center;
 	margin: 5px;				/* Spaces options */ 
@@ -73,4 +72,46 @@ h1, h2, h3, h4, h5, h6 {
 
 .sticky + .content {
 	padding-top: 60px;
+}
+
+/* Images */
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.img1 {
+	box-shadow: 0px 4px 6px 2px #222831;
+	display: block;
+	width: 350px;
+	height: auto;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Name in nav bar */
+.logo {
+	height: 35px;
+	width: 204px;
+	position: absolute;
+	left: 50%;
+	margin-top: 15px;
+	margin-left: -102px; /* 50% of your logo width */
+	display: block;
+}
+
+.icon {
+	width: auto;
+	height: 80px;
+	padding: 5px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: black;
 }
