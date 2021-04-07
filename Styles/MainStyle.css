@@ -10,6 +10,14 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: black;
+}
+
 footer {
 	text-align: center;
 }
@@ -110,12 +118,4 @@ footer {
 	width: auto;
 	height: 80px;
 	padding: 5px;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:link, a:visited {
-	color: black;
 }
