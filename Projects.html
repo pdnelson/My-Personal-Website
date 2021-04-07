@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Patrick Nelson</title>
+			<!-- Fonts! -->
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+		
+			<!--JqUERY -->
+			<script src="jquery-3.5.1.min.js"></script> 
+			
+	<style>
+		
+		/* over all format */
+		body {
+			font-family: 'Lora', serif;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		/* Navbar  */
+		
+		#navbar {
+			overflow: hidden;
+			background-color: #222831; 		/*nav bar bg color */
+			height: 90px;
+			
+		
+		}
+		
+		#navbar a {
+			margin-top: 30px;		/*spacing for logo */
+			float: none;
+			postition: absolute; 		
+			
+			display: block; 
+			color: #e4f9f5;				/* text color */
+			
+			padding: 5px 5px;			/* Text spacing */
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase; 
+			font-size: 20px;
+			opacity: 0.6;
+			transition: 0.3s;
+			
+			text-decoration: underline solid transparent;
+			
+		}		
+		#navbar a:hover {					/*  what hovering shows  */
+			opacity:1;
+			text-decoration: underline;	
+			
+
+		}
+		#navbar a.active {					/* Active section   */
+			opacity:1;
+			color: white;
+			text-decoration: underline;	
+		}
+		#navbar ul {
+			padding: 0; 
+			list-style: none; 
+			text-align: center;
+			
+		}
+		#navbar li{
+			display: inline-block;
+			text-align: center;
+			margin: 5px;				/* Spaces options */ 
+			
+		}
+		
+	
+	
+				
+				
+		/* make it sticky lads */		
+		
+		.content {
+			padding: 16px;
+		}
+		
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		.sticky + .content {
+			padding-top: 60px;
+		}
+		
+		
+
+
+		  /* Image jazz */
+			.center {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+			
+			.img1 { 									/* Patricks cute face  uwu */
+				box-shadow: 0px 4px 6px 2px #222831;
+				display: block;
+				width: 350px;
+				height: auto;
+				border-radius: 50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.logo{										/* Name in navbar */
+				height: 35px;
+				width: 204px;
+				position: absolute;
+				left: 50%;
+				margin-top: 15px;
+				margin-left: -102px;  					/* 50% of your logo width */
+				display: block;
+			}
+
+			.icon {										/* Icons for skills */
+				width: auto;
+				height: 80px;
+				padding: 5px;
+
+				
+			}
+			.icon2 {										/* For projects Icons */
+				width: auto;
+				height: 80px;
+				padding: 5px;
+			}
+			
+			
+			
+			
+			/* formatting sections */
+			
+			
+			.BodyTypeA { 			/* This was Album, but I switched it change # to . */
+				margin: auto;
+				width: 85%;
+				padding: 20px;
+				height: auto;
+				margin-bottom: 15px;
+				color: #e4f9f5;
+				border-radius: 25px;
+			
+				background-image: linear-gradient(to top, #222831, #1C273C);
+				
+			} 
+			
+			
+			.BodyTypeB {
+				margin: auto;
+				width: 90%;
+				padding: 10px;
+				height: auto;
+				margin-bottom: 15px;
+				
+				border-radius: 25px;
+				border-style: solid;
+				border-color: white;
+				border-width: 1px;
+				
+				font-family: 'IBM Plex Mono', monospace; 
+				color: #e4f9f5;
+				/* background-image: linear-gradient(to top, #273753, #1F2935); */
+			}
+			
+			
+			
+			.AlbumArt{
+				width: 150px;
+				height: auto;
+				padding: 5px;
+				float:right;
+				
+				
+			}
+			
+			
+			
+			
+			/* Music Specific */
+			
+				p.trigger{
+					margin-bottom:7px;
+					margin-top:-5px;
+					witdth: 100%;
+					height: 100%;
+					
+				}
+
+				.toggle_container{
+					margin-bottom:10px;
+				}
+
+				.toggle_container p{
+					margin:0px;
+				}
+
+				.toggle_container{
+					background:#222831;
+					clear: both;
+					font-size:100%;
+					color: #e4f9f5;
+					margin: 20px;
+					padding: 4px;
+				}
+				
+				/* Icon lineup */
+				
+					.column {		/* Three image containers (use 25% for four, and 50% for two, etc) */
+						
+						width: 20%px;
+						padding: 10px;
+					}
+					
+					.row {
+					  display: flex;
+					  justify-content: center; 
+
+					}
+					
+					@media screen and (max-width: 500px) {	/*for phones */
+					  .column {
+						width: 100%;
+					  }
+					}
+					
+					.row::after {		/* Clear floats after image containers */
+					  content: "";
+					  clear: both;
+					  display: table;
+					}
+					
+					#ProjectNav {
+						color: #Black ;
+						
+						font-family: 'IBM Plex Mono', monospace;
+						font-weight: bold;
+						margin-left: auto;
+						margin-right: auto; 
+						
+						text-align: center;
+						
+					}
+					
+			/* Top Button */
+				#myBtn {
+				  display: none;
+				  position: fixed;
+				  bottom: 10px;
+				  right: 1px;
+				  z-index: 99;
+				  font-size: 18px;
+				  border: none;
+				  outline: none;
+				  background-color: #222831;
+				  color: white;
+				  cursor: pointer;
+				  padding: 15px;
+				  border-radius: 4px;
+				}
+
+				#myBtn:hover {
+				  background-color: #273753;
+				}
+
+			/* Expanding feature for text on projects */
+			/* Style the button that is used to open and close the collapsible content */
+					.collapsible {
+					  cursor: pointer;
+					  padding: 10px;
+					  width: 100%;
+					  border: none;
+					  text-align: left;
+					  outline: none;
+					  font-size: 15px;
+					  color: #e4f9f5;
+					  background-color:  #1F2935;
+					}
+
+					/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+					 .collapsible:hover {
+					  background-color: #273753;
+					  border-radius: 25px;
+					}
+
+					/* Style the collapsible content. Note: hidden by default */
+					.contenthidden {
+					  padding: 0 18px;
+					  display: none;
+					  overflow: hidden;
+					  max-height: 0;
+					  transition: max-height 0.2s ease-out;
+					 
+					}
+				
+				.ProgramLang {
+					text-align: center;
+					padding: 7px;
+					margin: auto;
+					background-color: #29467E;
+					border-radius: 25px;
+					font-weight: bold;
+					font-family: 'IBM Plex Mono', monospace; 
+					width: 15%;
+				}
+			
+			
+				a{
+					text-decoration: none;
+				}
+				a:link, a:visited{
+					color: black;
+				}
+				a:hover{
+					
+				}
+				
+				
+			
+		</style> 
+
+	</head>
+
+
+	<body style= "background-color:#e4f9f5;">		<!-- Background color -->	<!-- old:F2F7F5,  -->
+	
+		
+	
+	
+		<div id="navbar">
+			<img : src ="logo white (no box).png" alt="logo" class=logo >			
+			
+				<ul>
+					<li><a href="index.html#Home">Home</a></li>
+					<li><a href="WorkExperience.html">Work Experience</a></li>
+					<li><a class="active" href="#Projects">Projects</a></li>
+					<li><a href="Music.html">Music</a></li>
+				</ul>
+			
+		</div>  
+		
+		
+		<!-- body main intro -->
+		
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>	
+		<div class="content">	
+			
+			
+				<center> <section id="ProjectNav">
+						 
+							<div class="row">
+								<a href="#Programming" ><div class="column" >
+									<img : src = "ProgrammingIcon.png" alt= "Program" class=icon>
+									<p> Programming </p>
+								</div></a>
+								
+								<a href="#Computer Hardware" ><div class="column">
+									<img  src = "motherboardIcon.png" alt= "MOTHER" class=icon>
+									<p> Computer Hardware </p>
+								</div></a>
+								
+								<a href="#3DPrinting" ><div class="column">
+									<img src = "3dPrinter.png" alt= "3dIcon" class=icon>
+									<p> 3D Printing </p>
+								</div></a>
+								
+								<a href="#Restorations" ><div class="column">
+									<img src = "iconelectrolux2.png" alt= "Restoration" class=icon>
+									<p> Restorations </p>
+								</div></a>
+								
+								<a href="#Miscellaneous" > <div class="column">
+									<img  src = "Etc3.png" alt= "Misc" class=icon>
+									<p> Miscellaneous </p>
+								</div></a>
+								
+							</div>
+					
+					
+					</section> </center>
+				
+				
+				<section id="Programming">
+					<div class="BodyTypeA">
+						<center><img src= "ProgrammingIconLight.png" class=icon></center>
+						<h1 style= "text-decoration:underline; text-align: center;"> Programming </h1>
+						
+						<div class= "BodyTypeB"> <!-- Program 1 -->
+							<button type="button" class="collapsible"><h2 style= "text-decoration:underline;font-size: 17px;"> Program Name 
+							<span style="float:right;"> Year
+							</span> </h2> </button> 
+						<div class="contenthidden">
+							<p> Good discription, many words. very good </p>
+							<div class="row">
+								<p class=ProgramLang>Code type 1</p> 
+								<p class=ProgramLang>Code type 2</p>
+							</div>
+						
+						</div>
+						</div>
+						
+						<div class= "BodyTypeB"> <!-- Program 1 -->
+							<button type="button" class="collapsible"><h2 style= "text-decoration:underline;font-size: 17px;"> Program Name 
+							<span style="float:right;"> Year
+							</span> </h2> </button> 
+						<div class="contenthidden">
+							<p> Good discription, many words. very good </p>
+							<div class="row">
+								<p class=ProgramLang>Code type 1</p> 
+								<p class=ProgramLang>Code type 2</p>
+							</div>
+						
+						</div>
+						</div>
+						
+						
+					</div>
+				</section>
+				
+				<section id="Computer Hardware">
+					<div class="BodyTypeA">
+						<center><img src= "motherboardIconLight.png" class=icon></center>
+						<h1 style= "text-decoration:underline; text-align: center;"> Computer Hardware </h1>
+						
+						<div class= "BodyTypeB">
+							<button type="button" class="collapsible"><h2 style= "text-decoration:underline;font-size: 17px;"> Project
+							<span style="float:right;"> Year
+							</span> </h2> </button> 
+						<div class="contenthidden">
+							<p> Good discription, many words. very good </p>
+							
+						</div>
+					
+					
+						</div>
+					</div>
+				</section>
+				
+			<section id="3DPrinting">
+					<div class="BodyTypeA">
+						<center><img src= "3dPrinterLight.png" class=icon></center>
+						<h1 style= "text-decoration:underline; text-align: center;"> 3D Printing </h1>
+						
+						<div class= "BodyTypeB">
+							<button type="button" class="collapsible"><h2 style= "text-decoration:underline;font-size: 17px;"> Project
+							<span style="float:right;"> Year
+							</span> </h2> </button> 
+						<div class="contenthidden">
+							<p> Good discription, many words. very good </p>
+							
+						</div>
+					
+					
+						</div>
+					</div>
+				</section>
+				
+				<section id="Restorations">
+					<div class="BodyTypeA">
+						<center><img src= "iconelectrolux2Light.png" class=icon></center>
+						<h1 style= "text-decoration:underline; text-align: center;"> Restorations </h1>
+						
+						<div class= "BodyTypeB">
+							<button type="button" class="collapsible"><h2 style= "text-decoration:underline;font-size: 17px;"> Project
+							<span style="float:right;"> Year
+							</span> </h2> </button> 
+						<div class="contenthidden">
+							<p> Good discription, many words. very good </p>
+							
+						</div>
+					
+					
+						</div>
+					</div>
+				</section>
+				
+				
+				<section id="Miscellaneous">
+					<div class="BodyTypeA">
+						<center><img src= "Etc3Light.png" class=icon></center>
+						<h1 style= "text-decoration:underline; text-align: center;"> Miscellaneous </h1>
+						
+						<div class= "BodyTypeB">
+							<button type="button" class="collapsible"><h2 style= "text-decoration:underline;font-size: 17px;"> Project
+							<span style="float:right;"> Year
+							</span> </h2> </button> 
+						<div class="contenthidden">
+							<p> Good discription, many words. very good </p>
+							
+						</div>
+					
+					
+						</div>
+					</div>
+				</section>
+		
+		
+		
+	</div>		
+		
+		<footer>Copyright 2021 Patrick Nelson</footer>
+
+
+	<script>
+		/*for header and nav sticky feature */ 
+		
+		window.onscroll = function() {myFunction()};
+			
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+			
+			function myFunction() {
+				if (window.pageYOffset > sticky) {
+					navbar.classList.add("sticky");
+				} else {
+				navbar.classList.remove("sticky");
+				}
+			}
+			
+			
+			/* for collapsable NOT IN USE*/ 
+			
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+				  content.style.display = "none";
+				} else {
+				  content.style.display = "block";
+				}
+			  });
+			}
+			
+			/* For expand feature NOT IN USE */
+			$('textarea.expand').focus(function () {
+				$(this).animate({ height: "4em" }, 500); 
+			});
+			
+			/* toggle*/
+			$(".toggle_container").hide();
+			$("p.trigger").click(function(){
+				$(this).toggleClass("active").next().slideToggle("normal");
+			});
+	
+			/*For top button */
+				//Get the button
+				var mybutton = document.getElementById("myBtn");
+
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "block";
+				  } else {
+					mybutton.style.display = "none";
+				  }
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
+				}
+				
+				
+			/* Script for expandable text box, content was changed to content hidden, used on projects */
+				var coll = document.getElementsByClassName("collapsible");
+				var i;
+
+				for (i = 0; i < coll.length; i++) {
+				  coll[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					
+					
+					
+								 var contenthidden = this.nextElementSibling;
+					if (contenthidden.style.maxHeight){
+					  contenthidden.style.maxHeight = null;
+					} else {
+					  contenthidden.style.maxHeight = contenthidden.scrollHeight + "px";
+					} 
+				  });
+				}
+	
+	</script>
+
+	
+	</body>
+
+
+
+
+</html>
+
+

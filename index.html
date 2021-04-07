@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Patrick Nelson</title>
+			<!-- Fonts! -->
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+		
+	<style>
+		
+		/* over all format */
+		body {
+			font-family: 'Lora', serif;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+		
+		
+		
+		
+		.header {
+			
+			background-color: #222831; 
+			/* background-image: linear-gradient(to bottom, black,  #222831); */
+			
+			padding: 30px;
+			width: 100%; 
+			height: 100vh;
+			top: 50%;
+			 
+			 background-image: linear-gradient(transparent, transparent, #222831),  url("Apple computer (wide).png");
+				background-position: center center;
+				background-repeat: no-repeat;
+				/* background-attachment: fixed;			scrolls but pic stays */
+				background-size: cover;
+				position: relative;
+				
+		}
+		
+		.headertext {
+			text-align: left;
+			font-size: 100px;
+			top: 20%;
+			margin-left: 50px;
+			position: absolute;
+			color: white;
+			font-family: 'Bebas Neue', cursive;
+		}
+		
+		
+		
+		
+		/* Navbar  */
+		
+		#navbar {
+			overflow: hidden;
+			background-color: #222831; 		/*nav bar bg color */
+			height: 90px;
+			
+		
+		}
+		
+		#navbar a {
+			margin-top: 30px;		/*spacing for logo */
+			float: none;
+			postition: absolute; 		
+			
+			display: block; 
+			color: #e4f9f5;				/* text color */
+			
+			padding: 5px 5px;			/* Text spacing */
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase; 
+			font-size: 20px;
+			opacity: 0.6;
+			transition: 0.3s;
+			
+			text-decoration: underline solid transparent;
+			
+		}		
+		#navbar a:hover {					/*  what hovering shows  */
+			opacity:1;
+			text-decoration: underline;	
+			
+
+		}
+		#navbar a.active {					/* Active section   */
+			opacity:1;
+			color: white;
+			text-decoration: underline;	
+		}
+		#navbar ul {
+			padding: 0; 
+			list-style: none; 
+			text-align: center;
+			
+		}
+		#navbar li{
+			display: inline-block;
+			text-align: center;
+			margin: 5px;				/* Spaces options */ 
+			
+		}
+		
+	
+	
+				
+				
+		/* make it sticky lads */		
+		
+		.content {
+			padding: 16px;
+		}
+		
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		.sticky + .content {
+			padding-top: 60px;
+		}
+		
+		
+
+
+		  /* Image jazz */
+			.center {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+			
+			.center2 {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.img1 { 									/* Patricks cute face  uwu */
+				box-shadow: 0px 4px 6px 2px #222831;
+				display: block;
+				width: 350px;
+				height: auto;
+				border-radius: 50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.logo{										/* Name in navbar */
+				height: 35px;
+				width: 204px;
+				position: absolute;
+				left: 50%;
+				margin-top: 15px;
+				margin-left: -102px;  					/* 50% of your logo width */
+				display: block;
+			}
+
+			.icon {										/* Icons for skills */
+				width: auto;
+				height: 80px;
+				padding: 5px;
+
+				
+			}
+			.icon2 {										/* Icons for MySQL since its bigger */
+				width: auto;
+				height: 80px;
+				padding: 5px;
+			}
+			
+			.iconContact {										/* Icons for contact */
+				width: auto;
+				height: 40px;
+				padding-right: 20px;
+
+				
+			}
+			
+			
+			/* formatting sections */
+			
+			#Home {
+				padding: 20px;
+				padding-top: 100px;
+			}
+			#About {
+				margin: auto;
+				width: 75%;
+				padding: 20px;
+				height: auto;
+				margin-bottom: 15px;
+				
+				border-radius: 25px;
+				
+				/* background-color: #222831; */
+				background-image: linear-gradient(to top, #222831, #1C273C);
+				
+				
+			}
+			
+			.BodyA {
+				color: #F2F7F5 ;
+				padding: 10px;
+				font-family: 'IBM Plex Mono', monospace; 
+			}
+			
+			.BodyTypeA { 			/* This was Album, but I switched it change # to . */
+				margin: auto;
+				width: 85%;
+				padding: 20px;
+				height: auto;
+				margin-bottom: 15px;
+				color: #e4f9f5;
+				border-radius: 25px;
+				font-family: 'IBM Plex Mono', monospace; 
+				background-image: linear-gradient(to top, #222831, #1C273C);
+				
+			} 
+			
+		
+			.BodyTypeB {
+				margin: auto;
+				width: 90%;
+				padding: 10px;
+				height: auto;
+				margin-bottom: 15px;
+				
+				border-radius: 25px;
+				border-style: solid;
+				border-color: white;
+				border-width: 1px;
+				
+				font-family: 'IBM Plex Mono', monospace; 
+				color: #e4f9f5;
+				/* background-image: linear-gradient(to top, #273753, #1F2935); */
+			}
+			
+			
+			#Skills {
+				margin: auto;
+				width: 75%;
+				padding: 20px;
+				height: auto;
+				margin-bottom: 15px;
+				left: 50%;
+				border-radius: 25px;
+				background-image: linear-gradient(to top, #F2FFFD, #e8ffff);
+				text-align:center
+			}
+			
+				a{
+					text-decoration: none;
+				}
+				a:link, a:visited{
+					color: black;
+				}
+				a:hover{
+					
+				}
+				
+			
+			#ContactTable {
+				width: 768px;
+				margin: 0 auto;
+				text-align: justify;
+			}
+
+	</style> 
+
+	</head>
+
+
+	<body style= "background-color:#e4f9f5;">		<!-- Background color -->	<!-- old:F2F7F5,  -->
+	
+		<div class= "header">
+			<div class= "headertext">
+				<p>Innovating</p>
+				<p>Everyday</p>
+			</div>
+		</div>
+	
+	
+		<div id="navbar">
+			<img : src ="logo white (no box).png" alt="logo" class=logo >			
+			
+				<ul>
+					<li><a class="active" href="#Home">Home</a></li>
+					<li><a href="WorkExperience.html">Work Experience</a></li>
+					<li><a href="Projects.html">Projects</a></li>
+					<li><a href="Music.html">Music</a></li>
+				</ul>
+			
+		</div>  
+		
+		
+		<!-- body main intro -->
+		
+		
+	<div class="content">	
+			<section id="Home">
+				<img src="PatrickIcon5.png" alt="A HANDSOME" class=img1>
+				
+				<center><h3 style= "font-weight:bold">Software Engineer, Developer, Engineering Enthusiast</h3></center>
+				<center><h1> &nbsp;  &nbsp;  </h1></center>
+			
+					<section id="About">
+						<center> <h2 style="font-weight:bold;color: #F2F7F5">About</h2> </center> 
+							<div class= "BodyA">
+								<!-- <p>	&nbsp;  &nbsp;	Since I was born, I was hella cute and smart. Hire me cause I’m the best person alive! <3 </p> -->
+								<p>	&nbsp;  &nbsp; I've always enjoyed fixing things and finding out how they work, which is why software engineering appeals to me so much. It gives me an opportunity to break my own (or other people's) code, find out why it broke, fix it, and learn something in the process. </p>
+
+								<p>	&nbsp;  &nbsp; Some of my main skills include being able to learn a new programming language, environment, and whole code base quickly. Some languages I've worked with and feel comfortable using include Kotlin, C#, SQL, Java, C, C++, Visual Basic, JavaScript, Python, Vue, and HTML, but I'm never opposed to taking on something new!</p>
+
+								<p>	&nbsp;  &nbsp;  Whether I'm stashing my changes to troubleshoot a higher-priority issue, setting breakpoints to understand why a variable is null, or limiting my browser's connection speed to replicate a bug, I'll use any software's many tools to help me achieve my goal more efficiently and effectively.  </p>
+							
+								<p>	&nbsp;  &nbsp;  I will be graduating from York College of Pennsylvania in May of 2021 with a Bachelor's degree in Computer Science.  </p>
+							</div>
+					</section>			
+			
+					<section id="Skills">
+						<center><h2 style="font-weight:bold">Skills</h2></center>
+						<img src="Cv2.png"  class=icon>
+						<img src="C++.png"  class=icon>
+
+						<img src="CSharp.png"  class=icon>
+						<img src="HTML3.png" class=icon>
+						<img src="CSS2.png"  class=icon>
+						<img src="JavaScript.png" class=icon>
+						<img src="java (3).png" class=icon>
+						<img src="Kotlin2.png"  class=icon>
+						<img src="SQL.png"  class=icon2>
+						<img src="Vue.png"  class=icon2>						
+						<img src="Python.png"  class=icon>	
+						<!-- <hr/>
+						<p> List your languages here uwu </p> -->
+					</section>
+			
+			</section>
+			
+
+			
+
+			
+			
+			
+			
+			
+			
+		<section id="Contact">
+			<center><h2 style="font-weight:bold; ">Contact Me</h2></center>
+				
+				<table  class="center2" >
+					<tr>
+						<td><a  href=https://www.linkedin.com/in/patrick-nelson-3a0a48180/ ><img src="LinkedinV2.png" class=iconContact>  </a> </td>
+						<td><a  href=https://www.linkedin.com/in/patrick-nelson-3a0a48180/ > LinkenIn </a> </td>
+					</tr>
+					<tr>					
+						<td><a href="mailto:pnelson1@ycp.edu"><img src="Email.png" class=iconContact> </a></td>
+						<td><a href="mailto:pnelson1@ycp.edu"><p style="color:black;"> pnelson1@ycp.edu </p> </a> </td>
+					</tr>
+					<tr>						
+						<td><a href=https://github.com/pdnelson ><img src= "GitHubLogo2.png" class=iconContact></a> </td>
+						<td><span> <a href=https://github.com/pdnelson > GitHub </a> </span> </td>
+					</tr>
+					
+				</table>
+			
+		</section>		
+			
+		
+		
+		
+	</div>		
+		
+		<footer>Copyright 2021 Patrick Nelson</footer>
+
+
+	<script>
+			window.onscroll = function() {myFunction()};
+			
+			var navbar = document.getElementById("navbar");
+			var sticky = navbar.offsetTop;
+			
+			function myFunction() {
+				if (window.pageYOffset > sticky) {
+					navbar.classList.add("sticky");
+				} else {
+				navbar.classList.remove("sticky");
+				}
+			}
+	</script>
+
+	
+	</body>
+
+
+
+
+</html>
+
+
