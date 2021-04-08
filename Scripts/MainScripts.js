@@ -6,7 +6,7 @@ var sticky = navbar.offsetTop;
 var topButton = document.getElementById("go-to-top");
 
 // Get all collapsible elements
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("collapsible") || 0;
 
 // Add collapse function to each collapsible element
 for (var i = 0; i < coll.length; i++) {
