@@ -1,4 +1,31 @@
-.header {
+#home {
+	padding: 20px;
+	padding-top: 100px;
+}
+
+#about {
+	margin: auto;
+	width: 75%;
+	padding: 20px;
+	height: auto;
+	margin-bottom: 15px;
+	border-radius: 25px;
+	background-image: linear-gradient(to top, #222831, #1C273C);
+}
+
+#skills {
+	margin: auto;
+	width: 75%;
+	padding: 20px;
+	height: auto;
+	margin-bottom: 15px;
+	left: 50%;
+	border-radius: 25px;
+	background-image: linear-gradient(to top, #F2FFFD, #e8ffff);
+	text-align:center
+}
+
+.landing-page {
 	background-color: #222831; 
 	padding: 30px;
 	width: 100%; 
@@ -11,7 +38,7 @@
 	position: relative;
 }
 
-.headertext {
+.landing-page-text {
 	text-align: left;
 	font-size: 100px;
 	top: 20%;
@@ -22,43 +49,16 @@
 }
 
 /* My contact information icons */
-.iconContact {
+.icon-contact {
 	width: auto;
 	height: 40px;
 	padding-right: 20px;
-}
-
-#Home {
-	padding: 20px;
-	padding-top: 100px;
-}
-
-#About {
-	margin: auto;
-	width: 75%;
-	padding: 20px;
-	height: auto;
-	margin-bottom: 15px;
-	border-radius: 25px;
-	background-image: linear-gradient(to top, #222831, #1C273C);
 }
 
 .bio {
 	color: #F2F7F5 ;
 	padding: 10px;
 	font-family: 'IBM Plex Mono', monospace; 
-}
-
-#Skills {
-	margin: auto;
-	width: 75%;
-	padding: 20px;
-	height: auto;
-	margin-bottom: 15px;
-	left: 50%;
-	border-radius: 25px;
-	background-image: linear-gradient(to top, #F2FFFD, #e8ffff);
-	text-align:center
 }
 
 .center-table {

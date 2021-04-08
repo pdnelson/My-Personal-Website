@@ -26,19 +26,19 @@
 		<div id="navbar">
 			<img : src ="Images/Index/logo white (no box).png" alt="logo" class=logo >			
 			<ul>
-				<li><a href="index.html#Home">Home</a></li>
+				<li><a href="index.html#home">Home</a></li>
 				<li><a href="WorkExperience.html">Work Experience</a></li>
-				<li><a class="active" href="#Projects">Projects</a></li>
+				<li><a class="active">Projects</a></li>
 				<li><a href="Music.html">Music</a></li>
 			</ul>
 		</div>  
 		
-		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		<button onclick="topFunction()" id="go-to-top" title="Go to top">Top</button>
 		
 		<div class="content">	
 			
 			<div class="center"> 
-				<section id="ProjectNav">
+				<section id="project-nav">
 					<div class="row">
 						<a href="#Programming">
 							<div class="column">
@@ -81,12 +81,12 @@
 				
 			<section id="Programming">
 			
-				<div class="BodyTypeA">
+				<div class="item-container">
 					<div class="center"><img src= "Images/Projects/Icons/ProgrammingIconLight.png" class=icon></div>
 					
 					<h1 style= "text-decoration:underline; text-align: center;"> Programming </h1>
 					
-					<div class= "BodyTypeB">
+					<div class= "item-contents">
 						<button type="button" class="collapsible">
 							<h2 style= "text-decoration:underline;font-size: 17px;"> Program Name 
 								<span style="float:right;"> Year </span> 
@@ -96,9 +96,9 @@
 						<div class="contenthidden">
 							<p> Good discription, many words. very good </p>
 							<div class="row">
-								<p class=ProgramLang>Code type 1</p> 
-								<p class=ProgramLang>Code type 2</p>
-								<p class=ProgramLang>Code type 3</p>
+								<p class="prog-lang">lang 1</p> 
+								<p class="prog-lang">lang 2</p>
+								<p class="prog-lang">lang 3</p>
 							</div>
 						</div>
 					</div>		
@@ -107,12 +107,12 @@
 				
 			<section id="Computer Hardware">
 			
-				<div class="BodyTypeA">
+				<div class="item-container">
 					<div class="center"><img src= "Images/Projects/Icons/motherboardIconLight.png" class=icon></div>
 					
 					<h1 style= "text-decoration:underline; text-align: center;"> Computer Hardware </h1>
 					
-					<div class= "BodyTypeB">
+					<div class= "item-contents">
 						<button type="button" class="collapsible">
 							<h2 style= "text-decoration:underline;font-size: 17px;"> Project
 								<span style="float:right;"> Year </span> 
@@ -128,12 +128,12 @@
 				
 			<section id="3DPrinting">
 			
-				<div class="BodyTypeA">
+				<div class="item-container">
 					<div class="center"><img src= "Images/Projects/Icons/3dPrinterLight.png" class=icon></div>
 					
 					<h1 style= "text-decoration:underline; text-align: center;"> 3D Printing </h1>
 					
-					<div class= "BodyTypeB">
+					<div class= "item-contents">
 						<button type="button" class="collapsible">
 							<h2 style= "text-decoration:underline;font-size: 17px;"> thing
 								<span style="float:right;"> Year </span>
@@ -149,12 +149,12 @@
 				
 			<section id="Restorations">
 			
-				<div class="BodyTypeA">
+				<div class="item-container">
 					<div class="center"><img src= "Images/Projects/Icons/iconelectrolux2Light.png" class=icon></div>
 					
 					<h1 style= "text-decoration:underline; text-align: center;"> Restorations </h1>
 					
-					<div class= "BodyTypeB">
+					<div class= "item-contents">
 						<button type="button" class="collapsible">
 							<h2 style= "text-decoration:underline;font-size: 17px;"> Restoration
 								<span style="float:right;"> Year </span> 
@@ -171,12 +171,12 @@
 				
 			<section id="Miscellaneous">
 			
-				<div class="BodyTypeA">
+				<div class="item-container">
 					<div class="center"><img src= "Images/Projects/Icons/Etc3Light.png" class=icon></div>
 					
 					<h1 style= "text-decoration:underline; text-align: center;"> Miscellaneous </h1>
 					
-					<div class= "BodyTypeB">
+					<div class= "item-contents">
 						<button type="button" class="collapsible">
 							<h2 style= "text-decoration:underline;font-size: 17px;"> Miscellaneous
 								<span style="float:right;"> Year </span>
@@ -243,7 +243,7 @@
 	
 			/*For top button */
 				//Get the button
-				var mybutton = document.getElementById("myBtn");
+				var mybutton = document.getElementById("go-to-top");
 
 				// When the user scrolls down 20px from the top of the document, show the button
 				window.onscroll = function() {scrollFunction()};

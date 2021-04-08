@@ -1,4 +1,4 @@
-#Album {
+#album {
 	margin: auto;
 	width: 75%;
 	padding: 20px;
@@ -9,7 +9,7 @@
 	background-image: linear-gradient(to top, #222831, #1C273C); 	
 } 
 
-.AlbumArt {
+.album-art {
 	width: 150px;
 	height: auto;
 	padding: 5px;
@@ -23,11 +23,11 @@
 	height: 100%;
 }
 
-.toggle_container p {
+.toggle-container p {
 	margin:0px;
 }
 
-.toggle_container {
+.toggle-container {
 	background-color: transparent; 
 	clear: both;
 	font-size:100%;
