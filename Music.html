@@ -20,6 +20,7 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="Styles/MainStyle.css">
 		<link rel="stylesheet" href="Styles/MusicStyle.css">
+		<link rel="stylesheet" href="Styles/ProjectStyle.css">
 
 	</head>
 
@@ -37,27 +38,27 @@
 		
 		<div class="content">	
 			<section id="album">
-				<img src="Images/Music/noart.png" alt= "noart" class ="album-art">
-				<h1 style="font-weight:bold; font-size: 17px;"> Title (Year) </h1> 
-				<p class="trigger" style = "margin-left: 15px;" >
-					Genre:  	<br>
-					Recorded: 	<br>
-					Released:	<br>
-					Length: <br>
-					Format: <br>
-					<br>
-					&#9660;
-				</p>
-					<div class="toggle-container">
-					   <div class="block">
-							<p>
-								1.	<br>
-								2.	<br>
-								3.	<br>
-								4.
-								</p>
-						</div>
+				<div class="item-contents">
+					<button type="button" class="collapsible">
+						<img src="Images/Music/noart.png" alt= "noart" class ="album-art">
+						<h1 style="font-weight:bold; font-size: 17px;"> Title (Year) </h1> 
+						<p style = "margin-left: 15px;" >
+							Genre:  	<br>
+							Recorded: 	<br>
+							Released:	<br>
+							Length: <br>
+							Format: <br>
+						</p>
+					</button>
+					<div class="contenthidden">
+						<p>
+							1.	<br>
+							2.	<br>
+							3.	<br>
+							4.
+						</p>
 					</div>
+				</div>
 			</section>
 		
 		</div>	
@@ -66,59 +67,6 @@
 		
 		<footer>Copyright 2021 Patrick Nelson</footer>
 
-
-	<script>
-		/*for header and nav sticky feature */ 
-		
-		window.onscroll = function() {myFunction()};
-			
-			var navbar = document.getElementById("navbar");
-			var sticky = navbar.offsetTop;
-			
-			function myFunction() {
-				if (window.pageYOffset > sticky) {
-					navbar.classList.add("sticky");
-				} else {
-				navbar.classList.remove("sticky");
-				}
-			}
-			
-			
-			/* for collapsable NOT IN USE*/ 
-			
-			var coll = document.getElementsByClassName("collapsible");
-			var i;
-
-			for (i = 0; i < coll.length; i++) {
-			  coll[i].addEventListener("click", function() {
-				this.classList.toggle("active");
-				var content = this.nextElementSibling;
-				if (content.style.display === "block") {
-				  content.style.display = "none";
-				} else {
-				  content.style.display = "block";
-				}
-			  });
-			}
-			
-			/* For expand feature NOT IN USE */
-			$('textarea.expand').focus(function () {
-				$(this).animate({ height: "4em" }, 500); 
-			});
-			
-			/* toggle*/
-			$(".toggle-container").hide();
-			$("p.trigger").click(function(){
-				$(this).toggleClass("active").next().slideToggle("normal");
-			});
-	</script>
-
-	
+		<script src="Scripts/MainScripts.js"></script> 
 	</body>
-
-
-
-
 </html>
-
-
