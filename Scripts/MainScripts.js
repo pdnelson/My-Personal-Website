@@ -1,7 +1,3 @@
-// Navigation bar sticky
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
 //Get the button
 var topButton = document.getElementById("go-to-top");
 
@@ -13,15 +9,6 @@ for (var i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
 	expandCollapse(this);
   });
-}
-
-// Used to stick the navigation bar to the top at all times
-function stickNav() {
-	if (window.pageYOffset > sticky) {
-		navbar.classList.add("sticky");
-	} else {
-		navbar.classList.remove("sticky");
-	}
 }
 
 // Display the "scroll to top" button after scrolling x pixels
@@ -53,6 +40,5 @@ function expandCollapse(item) {
 }
 
 window.onscroll = function() {
-	//stickNav();
 	if(topButton != null) scrollFunction();
 };

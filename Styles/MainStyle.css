@@ -120,3 +120,8 @@ footer {
 	height: 80px;
 	padding: 5px;
 }
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
