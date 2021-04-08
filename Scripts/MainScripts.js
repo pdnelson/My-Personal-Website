@@ -41,15 +41,9 @@ function topFunction() {
 
 // Handles expanding and collapsing of project/work items
 function expandCollapse(item) {
-	
-	item.classList.toggle("active");
 	var content = item.nextElementSibling;
 	
-	if (content.style.display === "block") {
-		content.style.display = "none";
-	} else {
-		content.style.display = "block";
-	}
+	content.style.display = "block";
 	
 	if (content.style.maxHeight){
 		content.style.maxHeight = null;
@@ -62,5 +56,3 @@ window.onscroll = function() {
 	stickNav();
 	if(topButton != null) scrollFunction();
 };
-
-
