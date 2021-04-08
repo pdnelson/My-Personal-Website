@@ -53,6 +53,6 @@ function expandCollapse(item) {
 }
 
 window.onscroll = function() {
-	stickNav();
+	//stickNav();
 	if(topButton != null) scrollFunction();
 };
