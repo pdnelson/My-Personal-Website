@@ -2,11 +2,11 @@
 var topButton = document.getElementById("go-to-top");
 
 // Get all collapsible elements
-var coll = document.getElementsByClassName("collapsible") || 0;
+var collapsibleItems = document.getElementsByClassName("collapsible") || 0;
 
 // Add collapse function to each collapsible element
-for (var i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+for (var i = 0; i < collapsibleItems.length; i++) {
+  collapsibleItems[i].addEventListener("click", function() {
 	expandCollapse(this);
   });
 }
@@ -51,5 +51,5 @@ window.onscroll = function() {
 
 // If the window is resized, collapse everything that is collapsible
 window.onresize = function() {
-	collapseAllItems(coll);
+	collapseAllItems(collapsibleItems);
 };
