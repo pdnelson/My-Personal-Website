@@ -39,6 +39,17 @@ function expandCollapse(item) {
 	} 
 }
 
+function collapseAllItems(items) {
+	for (var i = 0; i < items.length; i++) {
+		items[i].nextElementSibling.style.maxHeight = null;
+	}
+}
+
 window.onscroll = function() {
 	if(topButton != null) scrollFunction();
+};
+
+// If the window is resized, collapse everything that is collapsible
+window.onresize = function() {
+	collapseAllItems(coll);
 };
