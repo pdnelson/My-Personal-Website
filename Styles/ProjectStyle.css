@@ -62,7 +62,7 @@
 
 .row {
 	display: flex;
-	justify-content: center; 
+	justify-content: center;
 }
 
 @media screen and (max-width: 500px) {	/*for phones */
@@ -109,10 +109,18 @@
 .prog-lang {
 	text-align: center;
 	padding: 7px;
+	padding-left: 3px;
 	margin: auto;
 	background-color: #29467E;
 	border-radius: 25px;
 	font-weight: bold;
 	font-family: 'IBM Plex Mono', monospace; 
 	width: 15%;
+}
+
+.proj-image {
+	width: 500px;
+	height: 400px;
+	border-radius: 20px;
+	float: right;
 }

@@ -14,20 +14,16 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
-a {
-	text-decoration: none;
-}
-
-a:link, a:visited {
-	color: black;
-}
-
 footer {
 	text-align: center;
 }
 
 section {
 	scroll-margin-top: 6em;	
+}
+
+a {
+	color: white;
 }
 
 #navbar {
@@ -80,6 +76,14 @@ section {
 	margin: 5px;				/* Spaces options */ 
 }
 
+#project-nav a {
+	text-decoration: none;
+}
+
+#project-nav a:link, #project-nav a:visited {
+	color: black;
+}
+
 .content {
 	padding: 16px;
 }
@@ -128,4 +132,8 @@ section {
 .sticky {
   position: -webkit-sticky;
   position: sticky;
+}
+
+.description {
+	width: 100%;
 }
