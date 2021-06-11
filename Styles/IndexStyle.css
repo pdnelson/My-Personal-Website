@@ -12,6 +12,14 @@
 	background-image: linear-gradient(to top, #222831, #1C273C);
 }
 
+#nameheader {
+	margin: auto;
+	width: auto;
+	padding: 20px;
+	margin-bottom: 15px;
+	background-image: linear-gradient(to top, #222831, #1C273C);
+}
+
 #skills {
 	margin: auto;
 	width: 75%;
@@ -67,4 +75,13 @@
 	.itsme {
 		width: 80%;
 	}
+}
+
+/* Name in nav bar */
+.logo {
+	height: 35px;
+	width: 204px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }

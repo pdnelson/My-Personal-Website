@@ -31,7 +31,7 @@ section {
 }
 
 #navbar a {
-	margin-top: 30px;			/* spacing for logo */
+	margin-top: 10px;			/* spacing for logo */
 	float: none;
 	postition: absolute; 		
 	
@@ -104,17 +104,6 @@ section {
 
 .center {
 	text-align: center
-}
-
-/* Name in nav bar */
-.logo {
-	height: 35px;
-	width: 204px;
-	position: absolute;
-	left: 50%;
-	margin-top: 15px;
-	margin-left: -102px; /* 50% of your logo width */
-	display: block;
 }
 
 .icon {
