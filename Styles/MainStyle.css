@@ -52,6 +52,12 @@ a {
 	text-decoration: underline solid transparent;
 }
 
+@media screen and (max-width: 420px) {
+	#navbar a {
+		font-size: 15px;
+	}
+}
+
 /*  what hovering over a navbar item shows */		
 #navbar a:hover {					
 	opacity:1;
