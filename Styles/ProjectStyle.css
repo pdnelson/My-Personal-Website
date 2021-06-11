@@ -1,3 +1,7 @@
+a:link, a:visited {
+	color: white;
+}
+
 #project-nav {
 	color: #Black;
 	font-family: 'IBM Plex Mono', monospace;

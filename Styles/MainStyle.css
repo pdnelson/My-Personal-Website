@@ -24,10 +24,6 @@ section {
 	scroll-margin-top: 6em;	
 }
 
-a {
-	color: white;
-}
-
 #navbar {
 	overflow: hidden;
 	background-color: #222831;
@@ -88,7 +84,7 @@ a {
 	text-decoration: none;
 }
 
-#project-nav a:link, #project-nav a:visited {
+.blackURL {
 	color: black;
 }
 
