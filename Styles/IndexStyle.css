@@ -26,6 +26,7 @@
 	#about, #skills {
 		width: auto;
 		border-radius: 0px;
+		margin: 0;
 	}
 	.bio {
 		margin-left: 25px;
