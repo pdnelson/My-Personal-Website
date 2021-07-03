@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 footer {
@@ -82,6 +83,11 @@ section {
 
 #project-nav a {
 	text-decoration: none;
+}
+
+/* Use if lighter text is needed with darker backgrounds. */
+.dark-item {
+	color: #F2F7F5;
 }
 
 .blackURL {
