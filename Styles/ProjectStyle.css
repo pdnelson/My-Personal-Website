@@ -11,7 +11,6 @@ a:link, a:visited {
 	text-align: center;
 }
 		
-/* Top Button */
 #go-to-top {
 	display: none;
 	position: fixed;
@@ -19,7 +18,7 @@ a:link, a:visited {
 	right: 1px;
 	z-index: 99;
 	font-size: 18px;
-	border: none;
+	border: 1px solid white;
 	outline: none;
 	background-color: #222831;
 	color: white;
