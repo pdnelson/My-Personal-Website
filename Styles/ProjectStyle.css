@@ -31,6 +31,15 @@ a:link, a:visited {
 	background-color: #273753;
 }
 
+.category-heading {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.project-year {
+	float: right;
+}
+
 .item-container {
 	margin: auto;
 	width: 85%;
