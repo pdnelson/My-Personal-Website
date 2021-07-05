@@ -31,11 +31,6 @@ a:link, a:visited {
 	background-color: #273753;
 }
 
-.category-heading {
-	text-align: center;
-	text-decoration: underline;
-}
-
 .project-year {
 	float: right;
 }
@@ -61,34 +56,6 @@ a:link, a:visited {
 	border-width: 1px;
 	font-family: 'IBM Plex Mono', monospace; 
 	color: #e4f9f5;
-}
-	
-/* Icon lineup */
-	
-.column {		/* Three image containers (use 25% for four, and 50% for two, etc) */
-	width: 20%px;
-	padding: 10px;
-}
-
-.row {
-	display: flex;
-	justify-content: center;
-}
-
-@media screen and (max-width: 620px) {	/*for phones */
-	.column {
-		width: 100%;
-	}
-	
-	.item-contents {
-		width: auto;
-	}
-}
-
-.row::after {		/* Clear floats after image containers */
-	content: "";
-	clear: both;
-	display: table;
 }
 
 /* Expanding feature for text on projects */
@@ -120,6 +87,34 @@ a:link, a:visited {
 	max-height: 0;
 	transition: max-height 0.2s ease-out;
 }
+	
+.proj-categories {
+	display: flex;
+	justify-content: center;
+}
+	
+.proj-category-container {
+	width: 20%px;
+	padding: 10px;
+}
+
+.proj-category-img {
+	width: auto;
+	height: 80px;
+}
+
+.proj-category-heading {
+	color: black;
+	text-decoration: underline;
+}
+
+.proj-image {
+	width: 40%;
+	height: 100%;
+	border-radius: 20px;
+	float: right;
+	margin-top:10px;
+}
 
 .prog-lang {
 	text-align: center;
@@ -132,11 +127,64 @@ a:link, a:visited {
 	font-family: 'IBM Plex Mono', monospace; 
 	width: 15%;
 }
+	
+/* These are the icons that appear before each of their respective categories. */
+.proj-category-img-lower {
+	width: auto;
+	height: 80px;
+}
 
-.proj-image {
-	width: 40%;
-	height: 100%;
-	border-radius: 20px;
-	float: right;
-	margin-top:10px;
+.proj-category-heading-lower {
+	text-align: center;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 620px) {
+	.column {
+		padding-top: 10px;
+		margin: 0px;
+	}
+	
+	.item-container {
+		margin-left: 0px;
+		margin-right: 0px;
+		border-radius: 10px;
+		width: auto;
+	}
+	
+	.item-contents {
+		width: auto;
+	}
+	
+	.proj-heading {
+		font-size: 10pt;
+	}
+	
+	.proj-image {
+		float: none;
+		width: 100%;
+		border-radius: 10px;
+	}
+	
+	/* These are the icons that appear at the top. */
+	.proj-category-img {
+		height: 50px;
+	}
+	
+	.collapsible {
+		padding: 0px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.proj-category-heading-lower {
+		text-align: center;
+		text-decoration: underline;
+		font-size: 14pt;
+	}
+	
+	/* These are the icons that appear before each of their respective categories. */
+	.proj-category-img-lower {
+		height: 50px;
+	}
 }
