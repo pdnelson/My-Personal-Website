@@ -171,6 +171,10 @@ a:link, a:visited {
 		height: 50px;
 	}
 	
+	.proj-category-heading {
+		display: none;
+	}
+	
 	.collapsible {
 		padding: 0px;
 		padding-left: 10px;
