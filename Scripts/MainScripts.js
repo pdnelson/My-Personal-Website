@@ -7,9 +7,23 @@ var collapsibleItems = document.getElementsByClassName("collapsible") || 0;
 // Add collapse function to each collapsible element
 for (var i = 0; i < collapsibleItems.length; i++) {
   collapsibleItems[i].addEventListener("click", function() {
-	expandCollapse(this);
+	expandCollapse(this, true);
   });
 }
+
+// Expand/collapse mobile categories on projects
+var projCategoriesExpanded = false;
+document.getElementById("proj-categories-mobile-button").addEventListener("click", function() {
+	expandCollapse(this, false);
+	if(!projCategoriesExpanded) {
+		projCategoriesExpanded = true;
+		document.getElementById("proj-categories-mobile-button").innerHTML = "Hide Categories &#10506;";
+	}
+	else {
+		projCategoriesExpanded = false;
+		document.getElementById("proj-categories-mobile-button").innerHTML = "Show Categories &#10507;";
+	}
+})
 
 // Display the "scroll to top" button after scrolling x pixels
 function scrollFunction() {
@@ -27,8 +41,10 @@ function topFunction() {
 }
 
 // Handles expanding and collapsing of project/work items
-function expandCollapse(item) {
-	var content = item.nextElementSibling;
+function expandCollapse(item, nextElement) {
+	var content;
+	if(nextElement) content = item.nextElementSibling;
+	else content = item.previousElementSibling;
 	
 	content.style.display = "block";
 	
@@ -52,4 +68,7 @@ window.onscroll = function() {
 // If the window is resized, collapse everything that is collapsible
 window.onresize = function() {
 	collapseAllItems(collapsibleItems);
+	
+	// Must collapse the project categories separately
+	if(projCategoriesExpanded) document.getElementById("proj-categories-mobile-button").click();
 };
